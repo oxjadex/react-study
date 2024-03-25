@@ -1,4 +1,4 @@
-import Counter from "./Component";
+import Counter from "./Counter";
 
 const App = () => {
   return <Counter />;

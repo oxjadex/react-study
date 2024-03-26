@@ -1,7 +1,8 @@
 import Counter from "./Counter";
+import Component from "./Component";
 
 const App = () => {
-  return <Counter />;
-}
+  return <Component favoriteNumber={3} />;
+};
 
 export default App;

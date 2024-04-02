@@ -16,16 +16,15 @@ class Counter extends Component {
         <h2>바뀌지 않아 {fixedNumber}</h2>
         <button
           onClick={() => {
-            this.setState((prevState) => {
-              return {
-                number: prevState.number + 1,
-              };
-            });
-            // 위랑 아래의 기능은 같 ㅇㅇ
-            // 아래는 함수에서 바로 객체 반환
-            this.setState((prevState) => ({
-              number: prevState.number + 1,
-            }));
+            this.setState(
+              {
+                number: number + 1,
+              },
+              () => {
+                console.log("방금 state가 호출되었습니다.");
+                console.log(this.state);
+              },
+            );
           }}
         >
           +1
